@@ -1,5 +1,5 @@
 #include "stats.h"
-class Statistics
+class Stats
 {float average;
  float max;
  float min;
@@ -7,7 +7,7 @@ class Statistics
 
 Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
-    Statistics s;
+    Stats s;
     float sum=0,maxi=0,mini=99999;
     for(i=0;i<a.size();i++)
     {
