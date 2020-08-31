@@ -1,5 +1,5 @@
 #include "stats.h"
-Class Statistics
+class Statistics
 {float average;
  float max;
  float min;
