@@ -8,13 +8,21 @@ struct Stats
 Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
     struct Stats s;
-    float sum=0;
+    float sum=0,maxi=0,mini=99999;
     for(i=0;i<a.size();i++)
     {
+     if(a[i]>maxi)
+     {
+      maxi=a[i];
+     }
+     if(a[i]<mini)
+     mini=a[i];
+     
+     
         sum=sum+a[i];
      }
-    s.average=sum/a.size;
-    s.max=*max_element(a.begin(),a.end());
-    s.min=*min_element(a.begin(),a.end());
+    s.average=sum/a.size();
+    s.max=maxi;
+    s.min=mini;
     return s;
 }
