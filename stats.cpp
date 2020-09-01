@@ -1,6 +1,6 @@
 #include "stats.h"
 #include<cmath>
-#include<algorithms>
+using namespace std;
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
