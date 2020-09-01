@@ -1,5 +1,6 @@
 #include "stats.h"
 #include<cmath>
+#include<algorithms>
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
@@ -12,11 +13,11 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
          
         return s;
     }
-    auto result=std::minmax_element(a.begin(),a.end());
+    auto result=std::minmax_element(begin(a),end(a));
     
         
    
-    float sum=a[0],maxi=a[0],mini=a[0];
+    float sum=a[0];//,maxi=a[0],mini=a[0];
     int i;
     for(i=1;i<a.size();i++)
     {
