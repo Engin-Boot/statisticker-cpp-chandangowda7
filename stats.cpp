@@ -1,9 +1,4 @@
 #include "stats.h"
-class Stats
-{float average;
- float max;
- float min;
-};
 
 Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
