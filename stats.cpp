@@ -1,14 +1,15 @@
 #include "stats.h"
+#include<limits>
 
 Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
      Stats s;
     if(a.size()<0)
     {
-         s.average=0.0;
-         s.max=0.0;
-         s.min=0.0;
-         s.isNan=true;
+         s.average=NaN();
+         s.max=NaN();
+         s.min=NaN();
+         
         return s;
     }
         
