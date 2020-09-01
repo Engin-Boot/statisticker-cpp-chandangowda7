@@ -1,7 +1,7 @@
 #include "stats.h"
 #include<limits>
 
-Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
+struct Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
      Stats s;
     if(a.size()<0)
