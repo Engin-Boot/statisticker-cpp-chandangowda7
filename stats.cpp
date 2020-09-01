@@ -4,11 +4,11 @@
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
      Statistics::Stats s;
-    if(a.size()<0)
+    if(a.size()==0)
     {
-         s.average=nanf();
-         s.max=nanf();
-         s.min=nanf();
+         s.average=nanf('');
+         s.max=nanf('');
+         s.min=nanf('');
          
         return s;
     }
