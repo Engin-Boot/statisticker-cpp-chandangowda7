@@ -13,8 +13,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
          
         return s;
     }
-    auto result=std::minmax_element(begin(a),end(a));
-    
+   
         
    
     float sum=a[0];//,maxi=a[0],mini=a[0];
@@ -24,8 +23,31 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     sum=sum+a[i];
      }
     s.average=sum/a.size();
-    s.max=*result.second;
-    s.min=*result.first;
+    s.max=maxElement(a);
+    s.min=minElement(a);
    
     return s;
 }
+float minElement(std::vector<float>& a)
+   {
+       float mini=a[0];
+       for(i=1;i<a.size();i++)
+       {
+           if(a[i]<mini)
+               mini=a[i];
+       }
+       return mini;
+       
+   }
+float maxElement(std::vector<float>& a)
+   {
+       float max=a[0];
+       for(i=1;i<a.size();i++)
+       {
+           if(a[i]>max)
+               max=a[i];
+       }
+       return max;
+       
+   }
+
