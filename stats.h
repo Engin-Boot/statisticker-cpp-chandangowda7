@@ -2,7 +2,8 @@
 
 namespace Statistics {
     class Stats
-{float average;
+{public:
+ float average;
  float max;
  float min;
 };
