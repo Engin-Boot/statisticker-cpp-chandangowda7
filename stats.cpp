@@ -8,8 +8,8 @@ class Stats
 Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
     Stats s;
-    float sum=0,maxi=0,mini=99999;
-    for(i=0;i<a.size();i++)
+    float sum=a[0],maxi=a[0],mini=a[0];
+    for(i=1;i<a.size();i++)
     {
      if(a[i]>maxi)
      {
