@@ -6,12 +6,13 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
      Statistics::Stats s;
     if(a.size()==0)
     {
-         s.average=nanf('');
-         s.max=nanf('');
-         s.min=nanf('');
+         s.average=nanf("");
+         s.max=nanf("");
+         s.min=nanf("");
          
         return s;
     }
+    
         
    
     float sum=a[0],maxi=a[0],mini=a[0];
