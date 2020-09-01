@@ -8,6 +8,6 @@ namespace Statistics {
  float min;
 };
  Stats ComputeStatistics(const std::vector<float>& a);
- float maxElement(std::vector<float>& a);
- float minElement(std::vector<float>& a);
+ float maxElement(const std::vector<float>& a);
+ float minElement(const std::vector<float>& a);
 }
