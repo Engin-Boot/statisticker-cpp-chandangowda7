@@ -7,7 +7,5 @@ namespace Statistics {
  float max;
  float min;
  bool isNan;
-};
-
-    Stats ComputeStatistics(const std::vector<float>& a);
+ Stats ComputeStatistics(const std::vector<float>& a);};
 }
