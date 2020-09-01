@@ -1,7 +1,7 @@
 #include "stats.h"
 #include<limits>
 
-struct Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
+Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     //Implement statistics here
      Stats s;
     if(a.size()<0)
@@ -30,6 +30,6 @@ struct Stats Statistics::ComputeStatistics(const std::vector<float>& a) {
     s.average=sum/a.size();
     s.max=maxi;
     s.min=mini;
-    s.isNan=false;
+   
     return s;
 }
