@@ -42,7 +42,7 @@ float Statistics::maxElement(const std::vector<float>& arrayofNumbers)
        return max;
        
    }
- bool IsNaNPresent(const std::vector<float>& arrayofNumbers)
+ bool Statistics::IsNaNPresent(const std::vector<float>& arrayofNumbers)
  {
    
          int iterator;
