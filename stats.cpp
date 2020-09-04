@@ -5,14 +5,13 @@ using namespace std;
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& arrayofNumbers) {
     //Implement statistics here
      Statistics::Stats stat{nanf(""),nanf(""),nanf("")};
-    if((arrayofNumbers.size()>0) ){
-   if(!IsNaNPresent(arrayofNumbers))
-   {float sum=arrayofNumbers[0];//,maxi=a[0],mini=a[0];
-   
+    
+   if((arrayofNumbers.size()>0) &&!IsNaNPresent(arrayofNumbers))
+   {
     stat.average=average(arrayofNumbers);
     stat.max=maxElement(arrayofNumbers);
     stat.min=minElement(arrayofNumbers);
-   }}
+   }
     return stat;
 }
 float Statistics::minElement(const std::vector<float>& arrayofNumbers)
@@ -30,7 +29,7 @@ float Statistics::minElement(const std::vector<float>& arrayofNumbers)
 float Statistics::average(const std::vector<float>& arrayofNumbers)
    {
        
-    int iterator;int sum=0;
+    int iterator;float sum=0;
        for(iterator=0;iterator<arrayofNumbers.size();iterator++)
        {
            
