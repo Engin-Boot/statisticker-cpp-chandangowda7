@@ -8,12 +8,8 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& arrayo
     if((arrayofNumbers.size()>0) ){
    if(!IsNaNPresent(arrayofNumbers))
    {float sum=arrayofNumbers[0];//,maxi=a[0],mini=a[0];
-    int iterator;
-   /* for(iterator=1;iterator<arrayofNumbers.size();iterator++)
-    {
-    sum=sum+arrayofNumbers[iterator];
-     }*/
-    stat.average=sum/arrayofNumbers.size();
+   
+    stat.average=average(arrayofNumbers);
     stat.max=maxElement(arrayofNumbers);
     stat.min=minElement(arrayofNumbers);
    }}
@@ -29,6 +25,18 @@ float Statistics::minElement(const std::vector<float>& arrayofNumbers)
                min=arrayofNumbers[iterator];
        }
        return min;
+       
+   }
+float Statistics::average(const std::vector<float>& arrayofNumbers)
+   {
+       
+    int iterator;int sum=0;
+       for(iterator=0;iterator<arrayofNumbers.size();iterator++)
+       {
+           
+               sum=sum+arrayofNumbers[iterator];
+       }
+       return sum/arrayofNumbers.size();
        
    }
 float Statistics::maxElement(const std::vector<float>& arrayofNumbers)
