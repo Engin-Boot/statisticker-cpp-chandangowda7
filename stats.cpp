@@ -9,10 +9,10 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& arrayo
    if(!IsNaNPresent(arrayofNumbers))
    {float sum=arrayofNumbers[0];//,maxi=a[0],mini=a[0];
     int iterator;
-    for(iterator=1;iterator<arrayofNumbers.size();iterator++)
+   /* for(iterator=1;iterator<arrayofNumbers.size();iterator++)
     {
     sum=sum+arrayofNumbers[iterator];
-     }
+     }*/
     stat.average=sum/arrayofNumbers.size();
     stat.max=maxElement(arrayofNumbers);
     stat.min=minElement(arrayofNumbers);
