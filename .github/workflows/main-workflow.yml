@@ -18,3 +18,7 @@ jobs:
       
     - name: run
       run: ./testchecker
+    
+    - name: build
+      run: g++ -Wall -Wextra -o stats-test.cpp
+    
